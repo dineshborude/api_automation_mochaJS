@@ -10,9 +10,8 @@ const endpointPath = '/api/v1/superadmin/get-program-details?company_id=87d258df
 
 describe('Program Details', () => {
 
-  it.only('GET /Get Single Program Details', function (done) {
-    this.timeout(5000);
-
+  it('GET /Get Single Program Details', function (done) {
+ 
     evolvity
       .get(endpointPath)
       .set('Authorization', `Bearer ${access_token}`)

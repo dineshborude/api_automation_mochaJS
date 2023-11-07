@@ -1,7 +1,5 @@
 import supertest from "supertest";
 import { expect } from "chai";
-import { setAccessToken } from '../config/accessTokenModule.js';
-
 
 const loginData = require('../config/super_admin_data.js');
 const evolvity = supertest('https://staging.humanlytic.com:9000');
@@ -13,7 +11,6 @@ describe('Super Admin Login =>', () => {
 
   it('POST /super-admin-login', function (done) {
 
-    this.timeout(5000); // Set a timeout of 5 seconds
 
     const superAdminLogin = {
       "username": loginData.username,
@@ -38,14 +35,10 @@ describe('Super Admin Login =>', () => {
 
           access_token = res.body.data.login.access_token;
 
-         
-          
-
-
           console.log(access_token);
           
 
-          expect(res.body.data.profile.user_name).to.equal('Hemant');
+          expect(res.body.data.profile.user_name).to.equal('Hemant Kumar');
 
 
           console.log(res.body);
