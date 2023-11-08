@@ -38,9 +38,9 @@ describe('Super Admin Login =>', () => {
           console.log(access_token);
           
 
-          expect(res.body.data.profile.user_name).to.equal('Hemant Kumar');
+          expect(res.body.data.profile.user_name).to.equal('Dinesh Borudiya');
 
-
+          console.log('Response Body : '); 
           console.log(res.body);
 
           done();
