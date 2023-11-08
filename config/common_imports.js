@@ -1,9 +1,19 @@
-//We can delete this file now as this is part of common_imports file.
+// import supertest from "supertest";
+// import defaults from "../config/defaults.js";
+// import { expect } from "chai";
+
+// const evolvity = supertest(defaults.baseURL);
+
+// // export default imports;
+// export { supertest, defaults, expect, evolvity };
 
 import supertest from 'supertest';
+import defaults from '../config/defaults.js';
+import { expect } from 'chai';
 
-const evolvity = supertest('https://staging.humanlytic.com:9000');
-const endpointPath = '/api/v1/superadmin/login';
+const evolvity = supertest(defaults.baseURL);
+
+export { supertest, defaults, expect, evolvity};
 
 export const generateAccessToken = async () => {
   const bodyData = {
@@ -14,7 +24,7 @@ export const generateAccessToken = async () => {
 
   try {
     const res = await evolvity
-      .post(endpointPath)
+      .post('/api/v1/superadmin/login')
       .send(bodyData);
 
     if (res.status !== 200) {
@@ -28,4 +38,3 @@ export const generateAccessToken = async () => {
     throw error;
   }
 };
-

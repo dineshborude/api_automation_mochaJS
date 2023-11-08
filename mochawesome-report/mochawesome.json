@@ -1,0 +1,313 @@
+{
+  "stats": {
+    "suites": 5,
+    "tests": 5,
+    "passes": 4,
+    "pending": 1,
+    "failures": 0,
+    "start": "2023-11-08T14:25:55.457Z",
+    "end": "2023-11-08T14:26:08.248Z",
+    "duration": 12791,
+    "testsRegistered": 5,
+    "passPercent": 100,
+    "pendingPercent": 20,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "609dbb84-fef7-4682-9ee0-4b6e32cd8d13",
+      "title": "",
+      "fullFile": "",
+      "file": "",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "21e685db-8b8d-4e09-93bf-573602a49e09",
+          "title": "Super Admin Login =>",
+          "fullFile": "C:\\Users\\dines\\OneDrive\\Documents\\GitHub\\api_automation_mochaJS\\test\\01_super_admin_login.js",
+          "file": "\\test\\01_super_admin_login.js",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "POST /super-admin-login",
+              "fullTitle": "Super Admin Login => POST /super-admin-login",
+              "timedOut": false,
+              "duration": 1609,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "var superAdminLogin = {\n  \"username\": loginData.username,\n  \"password\": loginData.password,\n  \"role_id\": loginData.role_id\n};\n_common_imports.evolvity.post(endpointPath).send(superAdminLogin).end(function (err, res) {\n  if (err) {\n    console.error(err);\n    done(err);\n    return;\n  }\n  console.log('Status: ' + res.status);\n  console.log('Message: ' + res.body.message);\n  try {\n    access_token = res.body.data.login.access_token;\n    console.log('Access Token : ' + access_token);\n    (0, _common_imports.expect)(res.body.data.profile.user_name).to.equal('Dinesh Borudiya');\n    console.log();\n    console.log('Response Body : ');\n    console.log(res.body);\n    done();\n  } catch (assertionError) {\n    done(assertionError);\n  }\n});",
+              "err": {},
+              "uuid": "b8e30982-e435-40d9-9128-fdf6948fc455",
+              "parentUUID": "21e685db-8b8d-4e09-93bf-573602a49e09",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "b8e30982-e435-40d9-9128-fdf6948fc455"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 1609,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 10000
+        },
+        {
+          "uuid": "36769d7a-5884-4e9c-ab21-2e7def482e45",
+          "title": "Program Details",
+          "fullFile": "C:\\Users\\dines\\OneDrive\\Documents\\GitHub\\api_automation_mochaJS\\test\\02_get_program_details.js",
+          "file": "\\test\\02_get_program_details.js",
+          "beforeHooks": [
+            {
+              "title": "\"before all\" hook in \"Program Details\"",
+              "fullTitle": "Program Details \"before all\" hook in \"Program Details\"",
+              "timedOut": false,
+              "duration": 1262,
+              "state": null,
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, \"next\", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, \"throw\", err); } _next(undefined); });",
+              "err": {},
+              "uuid": "2465a60f-daab-4a9b-8ef8-1c900de8fdb6",
+              "parentUUID": "36769d7a-5884-4e9c-ab21-2e7def482e45",
+              "isHook": true,
+              "skipped": false
+            }
+          ],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "GET /Get Single Program Details",
+              "fullTitle": "Program Details GET /Get Single Program Details",
+              "timedOut": false,
+              "duration": 4212,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, \"next\", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, \"throw\", err); } _next(undefined); });",
+              "err": {},
+              "uuid": "383bdd4e-377b-44d9-9424-c8183887be8c",
+              "parentUUID": "36769d7a-5884-4e9c-ab21-2e7def482e45",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "383bdd4e-377b-44d9-9424-c8183887be8c"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 4212,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 10000
+        },
+        {
+          "uuid": "b7196047-d91b-4b95-86a3-74d16ef13420",
+          "title": "Program Details",
+          "fullFile": "C:\\Users\\dines\\OneDrive\\Documents\\GitHub\\api_automation_mochaJS\\test\\03_token_automation.js",
+          "file": "\\test\\03_token_automation.js",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "GET /Get Single Program Details",
+              "fullTitle": "Program Details GET /Get Single Program Details",
+              "timedOut": false,
+              "duration": 0,
+              "state": "pending",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": true,
+              "context": null,
+              "code": "",
+              "err": {},
+              "uuid": "d95e509c-e4e9-4071-ba64-df7676888fb6",
+              "parentUUID": "b7196047-d91b-4b95-86a3-74d16ef13420",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [],
+          "pending": [
+            "d95e509c-e4e9-4071-ba64-df7676888fb6"
+          ],
+          "skipped": [],
+          "duration": 0,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 10000
+        },
+        {
+          "uuid": "0b8ded2d-273e-42c5-b14a-de8361b514b7",
+          "title": "GET Super Admin Profile Info",
+          "fullFile": "C:\\Users\\dines\\OneDrive\\Documents\\GitHub\\api_automation_mochaJS\\test\\04_get_super_admin_profile.js",
+          "file": "\\test\\04_get_super_admin_profile.js",
+          "beforeHooks": [
+            {
+              "title": "\"before all\" hook in \"GET Super Admin Profile Info\"",
+              "fullTitle": "GET Super Admin Profile Info \"before all\" hook in \"GET Super Admin Profile Info\"",
+              "timedOut": false,
+              "duration": 1611,
+              "state": null,
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, \"next\", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, \"throw\", err); } _next(undefined); });",
+              "err": {},
+              "uuid": "d50610ac-3fb5-4c30-838b-e2f76ca5ed8b",
+              "parentUUID": "0b8ded2d-273e-42c5-b14a-de8361b514b7",
+              "isHook": true,
+              "skipped": false
+            }
+          ],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "GET /get super-admin profile",
+              "fullTitle": "GET Super Admin Profile Info GET /get super-admin profile",
+              "timedOut": false,
+              "duration": 1160,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, \"next\", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, \"throw\", err); } _next(undefined); });",
+              "err": {},
+              "uuid": "5d4153a8-f76e-420e-a7ba-dcf81e087e59",
+              "parentUUID": "0b8ded2d-273e-42c5-b14a-de8361b514b7",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "5d4153a8-f76e-420e-a7ba-dcf81e087e59"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 1160,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 10000
+        },
+        {
+          "uuid": "adc1d791-2994-434f-95c8-67143ef0285f",
+          "title": "Update Super Admin Profile =>",
+          "fullFile": "C:\\Users\\dines\\OneDrive\\Documents\\GitHub\\api_automation_mochaJS\\test\\05_update_super_admin_profile.js",
+          "file": "\\test\\05_update_super_admin_profile.js",
+          "beforeHooks": [
+            {
+              "title": "\"before all\" hook in \"Update Super Admin Profile =>\"",
+              "fullTitle": "Update Super Admin Profile => \"before all\" hook in \"Update Super Admin Profile =>\"",
+              "timedOut": false,
+              "duration": 1334,
+              "state": null,
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, \"next\", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, \"throw\", err); } _next(undefined); });",
+              "err": {},
+              "uuid": "00ad7b19-5696-4372-8c1b-4d891abcd835",
+              "parentUUID": "adc1d791-2994-434f-95c8-67143ef0285f",
+              "isHook": true,
+              "skipped": false
+            }
+          ],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "POST /update super-admin profile",
+              "fullTitle": "Update Super Admin Profile => POST /update super-admin profile",
+              "timedOut": false,
+              "duration": 1585,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, \"next\", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, \"throw\", err); } _next(undefined); });",
+              "err": {},
+              "uuid": "4ac7f27e-d0d9-48d3-9c18-b33d50aa93f1",
+              "parentUUID": "adc1d791-2994-434f-95c8-67143ef0285f",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "4ac7f27e-d0d9-48d3-9c18-b33d50aa93f1"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 1585,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 10000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 10000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "10.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": null,
+      "version": "6.2.0"
+    }
+  }
+}

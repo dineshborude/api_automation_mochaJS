@@ -1,9 +1,6 @@
-import supertest from "supertest";
-import { expect } from "chai";
+import { supertest, defaults, expect, evolvity } from '../config/common_imports';
+const { endpointPath, loginData } = require('../config/super_admin_data.js');
 
-const loginData = require('../config/super_admin_data.js');
-const evolvity = supertest('https://staging.humanlytic.com:9000');
-const endpointPath = '/api/v1/superadmin/login';
 
 global.access_token = "";
 
@@ -24,7 +21,7 @@ describe('Super Admin Login =>', () => {
       .end((err, res) => {
         if (err) {
           console.error(err);
-          done(err); // Pass the error to Mocha
+          done(err); 
           return;
         }
 
@@ -35,11 +32,12 @@ describe('Super Admin Login =>', () => {
 
           access_token = res.body.data.login.access_token;
 
-          console.log(access_token);
+          console.log('Access Token : '+access_token);
           
 
           expect(res.body.data.profile.user_name).to.equal('Dinesh Borudiya');
-
+          
+          console.log();
           console.log('Response Body : '); 
           console.log(res.body);
 
@@ -47,7 +45,7 @@ describe('Super Admin Login =>', () => {
 
         } catch (assertionError) {
 
-          done(assertionError); // Pass the assertion error to Mocha
+          done(assertionError); 
 
         }
       });

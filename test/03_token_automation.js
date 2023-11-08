@@ -6,7 +6,7 @@ const evolvity = supertest('https://staging.humanlytic.com:9000');
 const endpointPath = '/api/v1/superadmin/get-program-details?company_id=87d258df-6883-4e2e-9110-f1eeb4add334&program_id=d19e2364-2e7c-426b-85f8-dfc8aac2c153';
 let token = '';
 
-describe('Program Details', () => {
+xdescribe('Program Details', () => {
   before(async () => {
     token = await generateAccessToken();
   });

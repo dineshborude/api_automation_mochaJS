@@ -1,9 +1,6 @@
-import { generateAccessToken } from '../config/access_token_generator';
-import supertest from 'supertest';
-import { expect } from 'chai';
+import { supertest, defaults, expect, evolvity, generateAccessToken } from '../config/common_imports';
 
-const evolvity = supertest('https://staging.humanlytic.com:9000');
-const endpointPath = '/api/v1/superadmin/get-profile';
+const get_profile_endpoint = '/api/v1/superadmin/get-profile';
 let token = '';
 
 describe('GET Super Admin Profile Info', () => {
@@ -13,7 +10,7 @@ describe('GET Super Admin Profile Info', () => {
 
   it('GET /get super-admin profile', async function () {
     const res = await evolvity
-      .post(endpointPath)
+      .post(get_profile_endpoint)
       .set('Authorization', `Bearer ${token}`);
 
     console.log('Access Token: ' +token); 
