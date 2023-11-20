@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Mocha Tests" time="12.353" tests="5" failures="0" skipped="1">
+  <testsuite name="Root Suite" timestamp="2023-11-20T07:36:30" tests="0" time="0.000" failures="0">
+  </testsuite>
+  <testsuite name="Super Admin Login =&gt;" timestamp="2023-11-20T07:36:30" tests="1" file="C:\Users\dines\OneDrive\Documents\GitHub\api_automation_mochaJS\test\01_super_admin_login.js" time="1.483" failures="0">
+    <testcase name="Super Admin Login =&gt; POST /super-admin-login" time="1.478" classname="POST /super-admin-login">
+    </testcase>
+  </testsuite>
+  <testsuite name="Program Details" timestamp="2023-11-20T07:36:31" tests="1" file="C:\Users\dines\OneDrive\Documents\GitHub\api_automation_mochaJS\test\02_get_program_details.js" time="5.193" failures="0">
+    <testcase name="Program Details GET /Get Single Program Details" time="3.886" classname="GET /Get Single Program Details">
+    </testcase>
+  </testsuite>
+  <testsuite name="Program Details" timestamp="2023-11-20T07:36:36" tests="1" file="C:\Users\dines\OneDrive\Documents\GitHub\api_automation_mochaJS\test\03_token_automation.js" time="0.000" failures="0">
+  </testsuite>
+  <testsuite name="GET Super Admin Profile Info" timestamp="2023-11-20T07:36:36" tests="1" file="C:\Users\dines\OneDrive\Documents\GitHub\api_automation_mochaJS\test\04_get_super_admin_profile.js" time="2.542" failures="0">
+    <testcase name="GET Super Admin Profile Info GET /get super-admin profile" time="1.185" classname="GET /get super-admin profile">
+    </testcase>
+  </testsuite>
+  <testsuite name="Update Super Admin Profile =&gt;" timestamp="2023-11-20T07:36:39" tests="1" file="C:\Users\dines\OneDrive\Documents\GitHub\api_automation_mochaJS\test\05_update_super_admin_profile.js" time="3.133" failures="0">
+    <testcase name="Update Super Admin Profile =&gt; POST /update super-admin profile" time="1.868" classname="POST /update super-admin profile">
+    </testcase>
+  </testsuite>
+</testsuites>
