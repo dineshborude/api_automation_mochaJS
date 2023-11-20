@@ -1,3 +1,5 @@
+// We can delete this file now, As token can be generated from common_imports file.
+
 import { generateAccessToken } from '../config/access_token_generator';
 import supertest from 'supertest';
 import { expect } from 'chai';
@@ -10,7 +12,7 @@ xdescribe('Program Details', () => {
   before(async () => {
     token = await generateAccessToken();
   });
-
+   
   it('GET /Get Single Program Details', async function () {
     const res = await evolvity
       .get(endpointPath)

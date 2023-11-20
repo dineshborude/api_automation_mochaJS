@@ -1,12 +1,3 @@
-// import supertest from "supertest";
-// import defaults from "../config/defaults.js";
-// import { expect } from "chai";
-
-// const evolvity = supertest(defaults.baseURL);
-
-// // export default imports;
-// export { supertest, defaults, expect, evolvity };
-
 import supertest from 'supertest';
 import defaults from '../config/defaults.js';
 import { expect } from 'chai';
