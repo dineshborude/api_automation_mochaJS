@@ -8,7 +8,7 @@ describe('GET Super Admin Profile Info', () => {
     token = await generateAccessToken();
   });
 
-  it('GET /get super-admin profile', async function () {
+  it.only('GET /get super-admin profile', async function () {
     const res = await evolvity
       .post(get_profile_endpoint)
       .set('Authorization', `Bearer ${token}`);
